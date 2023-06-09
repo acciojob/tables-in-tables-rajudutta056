@@ -2,13 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+        table,td{
+            border:black solid 1px;
+            font-size: large;
+           
+        }
+        #html{
+            background-color: black;
+            color: white;
+
+        }
+        #colortable{
+            color:rgb(43, 17, 136);
+            text-decoration: underline;
+        }
+        #table2, #table1,#table3,#table4{
+            margin: 20px;
+            width: 30vw;
+            text-align: center;
+            border-style: double solid ;
+        }
+        
+
+    </style>
+    <title>Tables in Tables</title>
   </head>
   <body>
-    <table style="width: 100%; height: 100%">
-      <!-- Your code here -->
+    <table id="main">
+        <tr >
+            <td>
+                <table id="table2">
+                   
+                  <tr>
+                    <th colspan="2">Nested Table 2</th>
+                  </tr>
+                  <tr>
+                    <td>Coloumn 1</td>
+                    <td>abc</td>
+                  </tr>
+                  <tr>
+                    <td>Coloumn 2</td>
+                    <td>def</td>
+                  </tr>
+                </table>
+            </td>
+            <td>
+                <table id="table1">
+                    <tr colspan="2">
+                        <th>Nested Table 1</th>
+                    </tr>
+                    <tr rowspan="3">
+                        <td>
+                            <ul>
+                                <li> List item  </li>
+                                <li> List item  </li>
+                                <li> List item  </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+
+        </tr>
+        <tr >
+            <td >
+                <table id="table3">
+                    <tr >
+                        <th colspan="2">  Nested Table 3 </th>
+                    </tr>
+                    <tr>
+                        <td id="colortable">Nested Table</td>
+                        <td>Demo Continued</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table id="table4">
+                    <tr colspan="2">
+                        <th>Nested Table 4</th>
+                    </tr>
+                    <tr>
+                        <td id="html"> HTML </td>
+                    </tr>
+                </table>
+            </td>
+            
+        </tr>
     </table>
+
+    
+   
+    
   </body>
 </html>
